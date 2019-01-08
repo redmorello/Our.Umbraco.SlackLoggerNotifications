@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "66fb809944bb73e8")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "e9211f6b6765db48")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -166,9 +166,9 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Site Logo
 		///</summary>
 		[ImplementPropertyType("siteLogo")]
-		public object SiteLogo
+		public string SiteLogo
 		{
-			get { return this.GetPropertyValue("siteLogo"); }
+			get { return this.GetPropertyValue<string>("siteLogo"); }
 		}
 
 		///<summary>
@@ -413,9 +413,9 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Upload file
 		///</summary>
 		[ImplementPropertyType("umbracoFile")]
-		public object UmbracoFile
+		public string UmbracoFile
 		{
-			get { return this.GetPropertyValue("umbracoFile"); }
+			get { return this.GetPropertyValue<string>("umbracoFile"); }
 		}
 	}
 

@@ -1,6 +1,14 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@using log4net
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "Master.cshtml";
+
+    //LogHelper.Error<UmbracoTemplatePage>("Testing Slack", new Exception());
+
+    var logger = LogManager.GetLogger(typeof(Log4Slack.SlackAppender));
+    logger.Info("I know he can get the job, but can he do the job?");
+    logger.Debug("I'm not arguing that with you.");
+    logger.Error("I'm not arguing that with you.");
 }
 
 @CurrentPage.GetGridHtml("content", "fanoe")
